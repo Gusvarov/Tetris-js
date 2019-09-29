@@ -3,8 +3,8 @@ export default class Game {
     lines = 0;
     level = 0;
     playfield = [
-        [0,0,0,0,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,1,0,0,0,0],
+        [0,0,0,0,1,1,1,0,0,0],
         [0,0,0,0,0,0,0,0,0,0],
         [0,0,0,0,0,0,0,0,0,0],
         [0,0,0,0,0,0,0,0,0,0],
@@ -111,7 +111,7 @@ export default class Game {
      }
 
      lockPiece() {
-         const blocks = this.activePiece.blocks;
+        //  let blocks = this.activePiece.blocks;
          const { y: pieceY, x: pieceX, blocks } = this.activePiece;
 
          for (let y = 0; y < blocks.length; y++) {
